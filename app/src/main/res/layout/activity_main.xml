@@ -36,7 +36,7 @@
                     android:layout_marginStart="@dimen/_15sdp"
                     android:layout_marginEnd="@dimen/_15sdp"
                     android:backgroundTint="#FAECD2FF"
-                    android:text="صفحه 1"
+                    android:text="صفحه اصلی"
                     android:textColor="@android:color/black"
                     app:cornerRadius="30dp"/>
 
