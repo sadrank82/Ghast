@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFECF6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SigninActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/LayoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:background="#9C9CC7"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/vazirbold"
+                android:text="به گشت خوش آمدید"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_20ssp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textSignLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/vazirmedium"
+            android:text="ورود به حساب کاربری"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LayoutHeader" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardgmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_14sdp"
+            app:cardBackgroundColor="#FAD2EA"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@+id/textSignLabel">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_4sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/vazirmedium"
+                    android:includeFontPadding="false"
+                    android:text="E_Mail"
+                    android:textColor="#050505"
+                    android:textSize="@dimen/_11ssp" />
+
+                <EditText
+                    android:id="@+id/gmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@null"
+                    android:fontFamily="@font/vazirmedium"
+                    android:hint="Sadra@gmail.com"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#838383"
+                    android:textColorHint="#818181" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            app:cardBackgroundColor="#FAD2EA"
+            android:paddingTop="@dimen/_200sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@+id/cardgmail">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_4sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:fontFamily="@font/vazirmedium"
+                android:includeFontPadding="false"
+                android:text="Password"
+                android:textColor="#050505"
+                android:textSize="@dimen/_11ssp" />
+
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@null"
+                android:fontFamily="@font/vazirmedium"
+                android:hint="\u2022\u2022\u2022\u2022\u2022\u2022\u2022"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPassword"
+                android:textColor="#838383"
+                android:textColorHint="#818181" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/SignInButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:fontFamily="@font/vazirmedium"
+            android:layout_marginStart="@dimen/_100sdp"
+            android:layout_marginEnd="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:includeFontPadding="false"
+            android:text="ورود"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintTop_toBottomOf="@+id/cardpass"
+            app:cornerRadius="@dimen/_20sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/vazirmedium"
+            android:gravity="center"
+            android:id="@+id/noaccount"
+            android:text="آیا اکانت ندارید؟"
+            android:textColor="#000000"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintTop_toBottomOf="@+id/SignInButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
