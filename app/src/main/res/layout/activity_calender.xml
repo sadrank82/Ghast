@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".CalenderActivity">
+    <!--  هدر  -->
+    <LinearLayout android:id="@+id/headerLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/_12sdp">
+        <ImageView android:id="@+id/imageBack" android:layout_width="@dimen/_25sdp" android:layout_height="@dimen/_25sdp" android:clickable="true" android:focusable="true" android:src="@drawable/ic_arrow_back_24" app:tint="@color/black"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_8sdp" android:fontFamily="@font/vazirmedium" android:includeFontPadding="false" android:text="تقویم" android:textSize="@dimen/_15sdp"/>
+    </LinearLayout>
+    <!--  محتوای اسکرول پذیر  -->
+    <ScrollView android:id="@+id/scrollContainer" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/headerLayout" android:fillViewport="true">
+        <LinearLayout android:id="@+id/contentLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="@dimen/_12sdp">
+            <!--  تقویم  -->
+            <CalendarView android:id="@+id/calendarView" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <!--  لیست  -->
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="@dimen/_8sdp">
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/itemList" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_12sdp" android:nestedScrollingEnabled="false"/>
+                <LinearLayout android:id="@+id/emptyTask" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha=".6" android:gravity="center" android:orientation="vertical" android:visibility="gone">
+                    <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/baseline_do_not_disturb_24" app:tint="?attr/colorPrimary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center" android:text="@string/text_2" android:textColor="?attr/colorPrimary" android:textSize="14sp"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!--  دکمه افزودن آیتم  -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/addItemButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_alignParentBottom="true" android:layout_margin="@dimen/_16sdp" android:src="@drawable/ic_add_24" app:backgroundTint="?attr/colorPrimary" app:tint="?attr/colorOnPrimary"/>
+</RelativeLayout>
