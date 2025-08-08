@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.RedTheme" parent="Theme.Gasht">
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryVariant">@color/dark_red</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/red_secondary</item>
+        <item name="colorAccent">@color/red_secondary</item>
+
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:statusBarColor">@color/dark_red</item>
+        <item name="android:navigationBarColor">@color/red</item>
+
+        <item name="android:windowBackground">@color/background_light</item>
+    </style>
+
+    <style name="Theme.BlueTheme" parent="Theme.Gasht">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/dark_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/blue_secondary</item>
+        <item name="colorAccent">@color/blue_secondary</item>
+
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:statusBarColor">@color/dark_blue</item>
+        <item name="android:navigationBarColor">@color/blue</item>
+
+        <item name="android:windowBackground">@color/background_light</item>
+    </style>
+
+    <style name="Theme.GreenTheme" parent="Theme.Gasht">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/dark_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/green_secondary</item>
+        <item name="colorAccent">@color/green_secondary</item>
+
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:statusBarColor">@color/dark_green</item>
+        <item name="android:navigationBarColor">@color/green</item>
+
+        <item name="android:windowBackground">@color/background_light</item>
+    </style>
+</resources>

@@ -1,9 +1,16 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Gasht" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+    <!--  Base application theme.  -->
+    <style name="Base.Theme.Gasht" parent="Theme.Material3.DayNight.NoActionBar">
+        <!--  Customize your light theme here.  -->
+        <!--  <item name="colorPrimary">@color/my_light_primary</item>  -->
     </style>
-
-    <style name="Theme.Gasht" parent="Base.Theme.Gasht" />
+    <style name="Theme.Gasht" parent="Base.Theme.Gasht">
+        <item name="android:fontFamily">@font/vazir</item>
+        <item name="colorSecondary">@color/default_secondary</item>
+    </style>
+    <style name="CircleImageViewStyle" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
 </resources>

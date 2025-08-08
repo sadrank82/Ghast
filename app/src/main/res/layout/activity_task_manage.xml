@@ -1,0 +1,43 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:fitsSystemWindows="true" tools:context=".TaskManageActivity">
+    <!--  هدر  -->
+    <LinearLayout android:id="@+id/headerLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/_12sdp" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@+id/imageBack" android:layout_width="@dimen/_25sdp" android:layout_height="@dimen/_25sdp" android:clickable="true" android:focusable="true" android:src="@drawable/ic_arrow_back_24" app:tint="@color/black"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fitsSystemWindows="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/headerLayout" app:layout_constraintVertical_bias="1.0">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="end" android:orientation="vertical" android:padding="@dimen/_12sdp">
+                <TextView android:id="@+id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="چه فعالیتی دارید؟" android:textSize="20sp"/>
+                <!--  عنوان تسک  -->
+                <EditText android:id="@+id/titleInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="فعالیت را بنویسید" android:imeOptions="actionNext" android:importantForAutofill="no" android:inputType="text" android:textSize="@dimen/_13sdp"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearLayout3" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="end" android:orientation="vertical" android:padding="@dimen/_12sdp">
+                <TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="تنظیم هشدار" android:textSize="20sp"/>
+                <LinearLayout android:id="@+id/linearLayout2" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical|end">
+                    <!--  تنظیم تاریخ آلارم  -->
+                    <ImageView android:id="@+id/showPicker" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginEnd="8dp" android:clickable="true" android:focusable="true" android:src="@drawable/baseline_date_range_24"/>
+                    <!--  حذف تاریخ وارد شده  -->
+                    <ImageView android:id="@+id/deleteDate" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginEnd="8dp" android:clickable="true" android:focusable="true" android:src="@drawable/baseline_close_24" android:visibility="gone"/>
+                    <!--  تنظیم تاریخ آلارم  -->
+                    <EditText android:id="@+id/dateInput" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:clickable="true" android:focusable="false" android:hint="هشدار تنظیم نشده" android:imeOptions="actionDone" android:textSize="@dimen/_13sdp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="end" android:orientation="vertical" android:padding="@dimen/_12sdp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="دسته بندی" android:textSize="20sp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical|end">
+                    <!--  حذف دسته بندی وارد شده  -->
+                    <ImageView android:id="@+id/deleteType" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginEnd="8dp" android:clickable="true" android:focusable="true" android:src="@drawable/baseline_close_24" android:visibility="gone"/>
+                    <!--  انتخاب دسته بندی  -->
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/spinnerInputLayout" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="انتخاب موارد" app:boxBackgroundMode="outline" app:endIconDrawable="@drawable/baseline_arrow_drop_down_24" app:endIconMode="custom">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/spinnerEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:clickable="true" android:cursorVisible="false" android:focusable="false" android:inputType="none"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_marginBottom="24dp" android:gravity="end" android:paddingStart="@dimen/_12sdp" android:paddingEnd="@dimen/_12sdp">
+                <!--  دکمه حذف  -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/deleteFab" style="@style/Widget.Material3.FloatingActionButton.Tertiary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_8sdp" android:src="@drawable/baseline_delete_outline_24" app:elevation="0dp" app:tint="#FF5252"/>
+                <!--  دکمه ذخیره  -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/saveFab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="?attr/colorPrimary" android:src="@drawable/baseline_done_24" app:elevation="0dp" app:tint="?attr/colorOnPrimary"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

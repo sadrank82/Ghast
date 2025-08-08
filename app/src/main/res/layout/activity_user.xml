@@ -1,0 +1,23 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".UserActivity">
+    <!--  هدر  -->
+    <LinearLayout android:id="@+id/headerLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/_12sdp" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@+id/imageBack" android:layout_width="@dimen/_25sdp" android:layout_height="@dimen/_25sdp" android:clickable="true" android:focusable="true" android:src="@drawable/ic_arrow_back_24" app:tint="@color/black"/>
+    </LinearLayout>
+    <!--  عنوان صفحه  -->
+    <TextView android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16dp" android:text="حساب کاربری" android:textSize="@dimen/_18sdp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/headerLayout"/>
+    <!--  نمایش نام کاربری و ایمیل  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_8sdp" android:orientation="vertical" android:padding="@dimen/_14sdp" app:layout_constraintTop_toBottomOf="@+id/textView3">
+        <com.google.android.material.card.MaterialCardView android:id="@+id/cardUsername" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="@dimen/_20sdp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView3">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="@dimen/_4sdp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_8sdp" android:layout_marginTop="@dimen/_8sdp" android:layout_marginEnd="@dimen/_8sdp" android:fontFamily="@font/vazirmedium" android:includeFontPadding="false" android:text="نام کاربری" android:textColor="#050505" android:textSize="@dimen/_11ssp"/>
+                <TextView android:id="@+id/userName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_8sdp" android:layout_marginEnd="@dimen/_8sdp" android:fontFamily="@font/vazirmedium" android:includeFontPadding="false" android:singleLine="true"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView android:id="@+id/cardPassword" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_8sdp" app:cardCornerRadius="@dimen/_20sdp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/cardUsername">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="@dimen/_4sdp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_8sdp" android:layout_marginTop="@dimen/_8sdp" android:layout_marginEnd="@dimen/_8sdp" android:fontFamily="@font/vazirmedium" android:includeFontPadding="false" android:text="ایمیل" android:textColor="#050505" android:textSize="@dimen/_11ssp"/>
+                <TextView android:id="@+id/email" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_8sdp" android:layout_marginEnd="@dimen/_8sdp" android:fontFamily="@font/vazirmedium" android:includeFontPadding="false" android:singleLine="true"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
