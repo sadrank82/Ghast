@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+
 }
 
 android {
@@ -42,19 +43,20 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
 
+
     implementation ("com.intuit.sdp:sdp-android:1.1.1")
     implementation ("com.intuit.ssp:ssp-android:1.1.1")
     implementation("androidx.recyclerview:recyclerview:1.4.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("com.android.support:multidex:1.0.3")
-    implementation("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation("com.squareup.retrofit2:retrofit:converter-scalars:2.11.0")
+    //implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    //implementation("com.squareup.retrofit2:retrofit:converter-scalars:2.11.0")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
+    implementation("org.osmdroid:osmdroid-android:6.1.16")
 
-    implementation("com.mohamadamin:persianmaterialdatetimepicker:1.2.1")
-    implementation ("com.google.maps.android:android-maps-utils:3.14.0")
+   
 
-
+    
 
 }

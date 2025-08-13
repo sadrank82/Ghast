@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">gasht</string>
+    <string name="app_name">Gasht</string>
+    <string name="text">با کلیک روی نقشه میتوانید مکان دلخواه خود را ذخیره کنید.</string>
+    <string name="text_2">فعالیتی موجود نمی‌باشد!\nاز تقویم بالا تاریخ را انتخاب کنید.</string>
 </resources>
