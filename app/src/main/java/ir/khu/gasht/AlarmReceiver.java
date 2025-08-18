@@ -1,5 +1,7 @@
 package ir.khu.gasht;
 
+import static android.os.Build.VERSION_CODES.R;
+
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -48,7 +50,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
             // ساخت و نمایش نوتیفیکیشن
             NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
-                    .setSmallIcon(R.drawable.ic_launcher_foreground)
+                   // .setSmallIcon(R.drawable.ic_launcher_foreground)
                     .setContentTitle("هشدار انجام فعالیت")
                     .setContentText(message)
                     .setAutoCancel(true)
